@@ -14,3 +14,4 @@ categories: 配置
 - [coding](http://www.coding.net) **部署代码**
 - [多说](http://duoshuo.com) **评论**
 - [百度统计](http://tongji.baidu.com) **统计**
+- [disqus，RSS](http://blog.csdn.net/u010053344/article/details/50701191)
