@@ -105,11 +105,11 @@ social_icons:
   transition: false
 
 # Blog rolls
-#links_title: Links
+links_title: 友情链接
 #links_layout: block
 #links_layout: inline
-#links:
-  #Title: http://example.com/
+links:
+  HexoBlog: http://localhost:4000/HexoBlog
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
@@ -142,9 +142,9 @@ sidebar:
   #  - always  expand for all pages automatically
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  Totally remove sidebar including sidebar toggle.
-  display: post
+  #display: post
   #display: always
-  #display: hide
+  display: hide
   #display: remove
 
   # Sidebar offset from top menubar in pixels.
@@ -330,16 +330,16 @@ changyan:
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://github.com/xCss/Valine
 valine:
-  enable: true
-  appid: DXFrqFm9PeCaIewsoxLaVLbt-gzGzoHsz
-  appkey: gMcSq1FtGcLSuPlnn07Ou7TF
+  enable: false
+  appid:  # your leancloud application appid
+  appkey:  # your leancloud application appkey
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
   placeholder: Comment input placeholder
 
 # Support for youyan comments system.
 # You can get your uid from http://www.uyan.cc
-#youyan_uid: your uid
+#youyan_uid: 2142963
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
@@ -356,9 +356,10 @@ livere_uid: MTAyMC8zMDU5Ni83MTUx
 # This plugin is more useful in China, make sure you known how to use it.
 # And you can find the use guide at official webiste: http://www.jiathis.com/.
 # Warning: JiaThis does not support https.
-#jiathis:
+jiathis:
   ##uid: Get this uid from http://www.jiathis.com/
-#add_this_id:
+  enabled: true
+  add_this_id: 2142963
 
 # Share
 #duoshuo_share: true
@@ -434,9 +435,9 @@ rating:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: false
-  app_id: #<app_id>
-  app_key: #<app_key>
+  enable: true
+  app_id: DXFrqFm9PeCaIewsoxLaVLbt-gzGzoHsz
+  app_key: gMcSq1FtGcLSuPlnn07Ou7TF
 
 # Show PV/UV of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
@@ -486,13 +487,13 @@ calendar:
 
 # Algolia Search
 algolia_search:
-  enable: false
+  enable: true
   hits:
     per_page: 10
   labels:
-    input_placeholder: Search for Posts
-    hits_empty: "We didn't find any results for the search: ${query}"
-    hits_stats: "${hits} results found in ${time} ms"
+    input_placeholder: 输入关键字
+    hits_empty: "没有找到与 ${query} 相关内容"
+    hits_stats: "${hits}条相关记录，共耗时 ${time} ms"
 
 # Local search
 # Dependencies: https://github.com/flashlab/hexo-generator-search
