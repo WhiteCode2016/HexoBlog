@@ -72,7 +72,27 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 plugins: hexo-generate-feed
+    - hexo-qiniu-sync
 
+
+## 七牛云插件，存储图片等大文件
+qiniu:
+  offline: false
+  sync: true
+  bucket: white-blog
+  access_key: UuDoPn2JMUgxJTzFJS1H6BBVIRqmzT6yQy3M1Lo4
+  secret_key: 3mlz-P-kdAMaB6qMC7LY1WEZPFxYVrKl8t9yAfV8
+  dirPrefix:
+  urlPrefix: http://ovqjv507r.bkt.clouddn.com
+  local_dir: qiniuCloud
+  update_exist: true
+  image:
+    folder: images
+    extend:
+  js:
+    folder: js
+  css:
+    folder: css
 ## Themes: https://hexo.io/themes/
 #theme: landscape
 theme: next
