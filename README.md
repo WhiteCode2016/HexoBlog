@@ -13,5 +13,6 @@
 3. 分享：[JiaThis](http://www.jiathis.com/)
 4. 统计：[LeanCloud](https://leancloud.cn)
 5. 搜索：[algolia](https://www.algolia.com)
-6. RSS
+6. 图片存储：[七牛云](https://portal.qiniu.com)
+7. RSS
  
