@@ -18,7 +18,7 @@
 
 ##### 操作
 ###### 1、clone项目 
-  ```
+  ```git
 	git clone git@github.com:WhiteCode2016/HexoBlog.git
 	
   ```
