@@ -115,8 +115,8 @@ links:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
-#avatar: /uploads/avatar.jpg
-avatar: http://ovqjv507r.bkt.clouddn.com/Capture001.png
+avatar: /uploads/avatar.jpg
+#avatar: http://ovqjv507r.bkt.clouddn.com/images/Capture001.png
 
 # Table Of Contents in the Sidebar
 toc:

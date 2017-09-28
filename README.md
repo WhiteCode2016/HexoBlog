@@ -15,4 +15,34 @@
 5. 搜索：[algolia](https://www.algolia.com)
 6. 图片存储：[七牛云](https://portal.qiniu.com)
 7. RSS
- 
+
+##### 操作
+###### 1、clone项目 
+  ```
+	git clone git@github.com:WhiteCode2016/HexoBlog.git
+	
+  ```
+###### 2、本地部署
+  ```
+	npm install hexo
+	npm install
+	npm install hexo-deployer-git --save
+  ```
+###### 3、新建博文
+  ```
+	hexo new "work PC test"
+  ```
+###### 4、本地运行查看（localhost:4000）
+  ```
+	hexo server
+  ```
+###### 5、推送到hexo分支
+  ```
+	git add .
+	git commit -m "add work PC test"
+	git push origin hexo
+  ```
+###### 6、部署到master分支
+  ```
+	hexo g -d
+  ```
