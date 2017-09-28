@@ -18,31 +18,32 @@
 
 ##### 操作
 ###### 1、clone项目 
-  ```git
+  ```java
 	git clone git@github.com:WhiteCode2016/HexoBlog.git
 	
   ```
 ###### 2、本地部署
-  ```
+  ```java
 	npm install hexo
 	npm install
 	npm install hexo-deployer-git --save
   ```
 ###### 3、新建博文
-  ```
+  ```java
+	git pull origin hexo
 	hexo new "work PC test"
   ```
 ###### 4、本地运行查看（localhost:4000）
-  ```
+  ```java
 	hexo server
   ```
 ###### 5、推送到hexo分支
-  ```
+  ```java
 	git add .
 	git commit -m "add work PC test"
 	git push origin hexo
   ```
 ###### 6、部署到master分支
-  ```
+  ```java
 	hexo g -d
   ```
