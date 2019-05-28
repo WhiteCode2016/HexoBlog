@@ -5,7 +5,7 @@
   <link href="/HexoBlog/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-28T08:26:37.058Z</updated>
+  <updated>2019-05-28T08:29:40.121Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,10 +20,11 @@
     <link href="http://yoursite.com/2019/05/28/%E9%9D%A2%E8%AF%95%E7%AF%87%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9AJava%E5%9F%BA%E7%A1%80/"/>
     <id>http://yoursite.com/2019/05/28/面试篇（一）：Java基础/</id>
     <published>2019-05-28T03:15:23.000Z</published>
-    <updated>2019-05-28T08:26:37.058Z</updated>
+    <updated>2019-05-28T08:29:40.121Z</updated>
     
     <content type="html"><![CDATA[<h5 id="Java的特征"><a href="#Java的特征" class="headerlink" title="Java的特征"></a>Java的特征</h5><p>封装、继承、多态、抽象</p>
-<h5 id="重写与重载的区别"><a href="#重写与重载的区别" class="headerlink" title="重写与重载的区别"></a>重写与重载的区别</h5><p>重载发生在一个类中，同名的方法如果有不同的参数列表（参数类型不同、参数个数不同或参数顺序不同），则视为重载；</p>
+<p>#####重写与重载的区别</p>
+<p>重载发生在一个类中，同名的方法如果有不同的参数列表（参数类型不同、参数个数不同或参数顺序不同），则视为重载；</p>
 <p>重写发生在子类与父类之间，要求子类被重写的方法与父类被重写的方法有相同的参数列表，有兼容的返回类型，则视为重写；</p>
 <p>重载对返回类型没有特殊的要求，不能根据返回类型进行区分。</p>
 <h5 id="抽象类与接口的区别"><a href="#抽象类与接口的区别" class="headerlink" title="抽象类与接口的区别"></a>抽象类与接口的区别</h5><p>默认的实现方法：抽象类可以有默认的实现方法；接口完全是抽象的，根本不存在实现的方法。</p>
@@ -73,7 +74,8 @@
     <summary type="html">
     
       &lt;h5 id=&quot;Java的特征&quot;&gt;&lt;a href=&quot;#Java的特征&quot; class=&quot;headerlink&quot; title=&quot;Java的特征&quot;&gt;&lt;/a&gt;Java的特征&lt;/h5&gt;&lt;p&gt;封装、继承、多态、抽象&lt;/p&gt;
-&lt;h5 id=&quot;重写与重载的区别&quot;&gt;&lt;a href=&quot;#重写与重载的
+&lt;p&gt;#####重写与重载的区别&lt;/p&gt;
+&lt;p&gt;重载发生在一个类中，
     
     </summary>
     
