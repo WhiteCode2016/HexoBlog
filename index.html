@@ -424,49 +424,25 @@
       
         
           
-            <h5 id="Java的特征"><a href="#Java的特征" class="headerlink" title="Java的特征"></a>Java的特征</h5><p>封装、继承、多态、抽象</p>
-<p>#####重写与重载的区别</p>
-<p>重载发生在一个类中，同名的方法如果有不同的参数列表（参数类型不同、参数个数不同或参数顺序不同），则视为重载；</p>
-<p>重写发生在子类与父类之间，要求子类被重写的方法与父类被重写的方法有相同的参数列表，有兼容的返回类型，则视为重写；</p>
-<p>重载对返回类型没有特殊的要求，不能根据返回类型进行区分。</p>
-<h5 id="抽象类与接口的区别"><a href="#抽象类与接口的区别" class="headerlink" title="抽象类与接口的区别"></a>抽象类与接口的区别</h5><p>默认的实现方法：抽象类可以有默认的实现方法；接口完全是抽象的，根本不存在实现的方法。</p>
-<p>实现：子类需要通过extends继承抽象类，如果子类不是抽象类的话，需要提供抽象类中所有</p>
-<p>声明的方法的实现；子类需要通过implement来实现接口，它需要提供接口中所有声明的方法</p>
-<p>的实现。</p>
-<p>构造器：抽象类可以有构造器；接口不能有。</p>
-<p>与正常Java类的区别：除了不能实例化抽象类之外，与普通Java类型没有任何区别；接口是完全不同的类型。</p>
-<p>访问修饰符：抽象方法可以有public、protected和default；接口方法默认是public，且不能使用其他修饰符。</p>
-<p>main方法：抽象方法可以有main方法并且可以运行；接口没有main方法。</p>
-<p>多继承：抽象类可以继承一个类和实现多个接口；接口只能继承一个或多个其他接口。</p>
-<p>添加新方法：往抽象类中添加新方法，你可以给你提供默认的实现，你可以不需要改变你现在的代码；往接口中添加新方法，你必须改变实现该接口的类。</p>
-<h5 id="hasCode-与equal-的作用、区别、联系"><a href="#hasCode-与equal-的作用、区别、联系" class="headerlink" title="hasCode()与equal()的作用、区别、联系"></a><code>hasCode()</code>与<code>equal()</code>的作用、区别、联系</h5><p><code>hashCode()</code>与<code>equal()</code>方法的作用其实是一样的，都是用来比较两个对象是否相等。</p>
-<p>重写<code>equal()</code>方法比较的比较全面和复杂，效率较低，而利用<code>hashCode()</code>进行对比，只要生成一个hash值进行比较，效率高。</p>
-<p><code>hashCode()</code>并不是完全可靠的，有时候不同的对象他们生成的hash值也会一样，所以<code>hashCode()</code>只能说大部分时候可靠，并不是绝对可靠。</p>
-<p>总结：<code>equal()</code>相等的两个对象的<code>hashCode()</code>肯定相等，也就是<code>equal()</code>对比绝对可靠；<code>hashCode()</code>相等的两个对象的<code>equal()</code>不一定相等，也就是<code>hashCode()</code>不是绝对可靠。</p>
-<h5 id="equal与-的区别"><a href="#equal与-的区别" class="headerlink" title="equal与==的区别"></a><code>equal</code>与<code>==</code>的区别</h5><p>对于<code>==</code>,如果作用于基本数据类型的变量，则直接比较其存储的值是否相等，如果作用于引用类型，则比较的是所指向的对象的地址；</p>
-<p>对于<code>equal()</code>方法，如果没有对<code>equal()</code>方法进行重写，则比较的是引用类型的变量所指向的对象的地址,注意：<code>equal()</code>方法不能作用于基本数据类型的变量。</p>
-<p>#####<code>String</code>、<code>StringBuffer</code>和<code>StringBuilder</code>的区别</p>
-<p><code>String</code>类中使用字符数组保存字符串并用final修饰，<code>StringBuffer</code>和<code>StringBuilder</code>都继承</p>
-<p>自<code>AbstractStringBuilder</code>类，<code>AbstractStringBuilder</code>中也使用字符数组保存字符串。</p>
-<p><code>String</code>对象是不可变的，也就是可以理解为常量，显然线程安全；</p>
-<p><code>StringBuffer</code>对方法加了同步锁或者对调用的方法加了同步锁，所以是线程安全的；</p>
-<p><code>StringBuilder</code>并没有对方法进行加同步锁，所以是非线程安全的。</p>
-<h5 id="List、Set、Map的区别"><a href="#List、Set、Map的区别" class="headerlink" title="List、Set、Map的区别"></a><code>List</code>、<code>Set</code>、<code>Map</code>的区别</h5><p><code>List</code>、<code>Set</code>都是继承自<code>Collection</code>接口；</p>
-<p><code>List</code>特征：元素有放入顺序，可重复；</p>
-<p><code>Set</code>特征：元素无放入顺序，不可重复，重复元素会覆盖；</p>
-<p><code>Map</code>特征：元素无序，key值不可重复（value值可重复）；</p>
-<h5 id="ArrayList与LinkedList的区别"><a href="#ArrayList与LinkedList的区别" class="headerlink" title="ArrayList与LinkedList的区别"></a><code>ArrayList</code>与<code>LinkedList</code>的区别</h5><p><code>ArrayLis</code>t是基于动态数组的数据结构实现的，因为地址连续，插入和删除操作效率比较低，适合查询；<code>LinkedList</code>是基于链表的数据结构实现的，因为地址是任意的，开辟空间的时候不需要一个连续的地址，对于查询操作效率比较低，适合插入和删除操作。</p>
-<h5 id="ArrayList与Vector的区别"><a href="#ArrayList与Vector的区别" class="headerlink" title="ArrayList与Vector的区别"></a><code>ArrayList</code>与<code>Vector</code>的区别</h5><ul>
+            <h4 id="Java的特征"><a href="#Java的特征" class="headerlink" title="Java的特征"></a>Java的特征</h4><p>封装、继承、多态、抽象</p>
+<h4 id="重写与重载的区别"><a href="#重写与重载的区别" class="headerlink" title="重写与重载的区别"></a>重写与重载的区别</h4><p>重载发生在一个类中，同名的方法如果有不同的参数列表（参数类型不同、参数个数不同或参数顺序不同），则视为重载，重载对返回类型没有特殊的要求，不能根据返回类型进行区分；<br>重写发生在子类与父类之间，要求子类被重写的方法与父类被重写的方法有相同的参数列表，有兼容的返回类型，则视为重写。</p>
+<h4 id="抽象类与接口的区别"><a href="#抽象类与接口的区别" class="headerlink" title="抽象类与接口的区别"></a>抽象类与接口的区别</h4><p>默认的实现方法：抽象类可以有默认的实现方法；接口完全是抽象的，根本不存在实现的方法。<br>实现：子类需要通过extends继承抽象类，如果子类不是抽象类的话，需要提供抽象类中所有声明的方法的实现；子类需要通过implement来实现接口，它需要提供接口中所有声明的方法的实现。<br>构造器：抽象类可以有构造器；接口不能有。<br>与正常Java类的区别：除了不能实例化抽象类之外，与普通Java类型没有任何区别；接口是完全不同的类型。<br>访问修饰符：抽象方法可以有public、protected和default；接口方法默认是public，且不能使用其他修饰符。<br>main方法：抽象方法可以有main方法并且可以运行；接口没有main方法。<br>多继承：抽象类可以继承一个类和实现多个接口；接口只能继承一个或多个其他接口。<br>添加新方法：往抽象类中添加新方法，你可以给你提供默认的实现，你可以不需要改变你现在的代码；往接口中添加新方法，你必须改变实现该接口的类。</p>
+<h4 id="hasCode-与equal-的作用、区别、联系"><a href="#hasCode-与equal-的作用、区别、联系" class="headerlink" title="hasCode()与equal()的作用、区别、联系"></a><code>hasCode()</code>与<code>equal()</code>的作用、区别、联系</h4><p><code>hashCode()</code>与<code>equal()</code>方法的作用其实是一样的，都是用来比较两个对象是否相等。<br>重写<code>equal()</code>方法比较的比较全面和复杂，效率较低，而利用<code>hashCode()</code>进行对比，只要生成一个hash值进行比较，效率高。<br><code>hashCode()</code>并不是完全可靠的，有时候不同的对象他们生成的hash值也会一样，所以<code>hashCode()</code>只能说大部分时候可靠，并不是绝对可靠。<br>总结：<code>equal()</code>相等的两个对象的<code>hashCode()</code>肯定相等，也就是<code>equal()</code>对比绝对可靠；<code>hashCode()</code>相等的两个对象的<code>equal()</code>不一定相等，也就是<code>hashCode()</code>不是绝对可靠。</p>
+<h4 id="equal-与-的区别"><a href="#equal-与-的区别" class="headerlink" title="equal()与==的区别"></a><code>equal()</code>与<code>==</code>的区别</h4><p>对于<code>==</code>,如果作用于基本数据类型的变量，则直接比较其存储的值是否相等，如果作用于引用类型，则比较的是所指向的对象的地址；<br>对于<code>equal()</code>方法，如果没有对<code>equal()</code>方法进行重写，则比较的是引用类型的变量所指向的对象的地址,注意：<code>equal()</code>方法不能作用于基本数据类型的变量。</p>
+<h4 id="String、StringBuffer和StringBuilder的区别"><a href="#String、StringBuffer和StringBuilder的区别" class="headerlink" title="String、StringBuffer和StringBuilder的区别"></a><code>String</code>、<code>StringBuffer</code>和<code>StringBuilder</code>的区别</h4><p><code>String</code>类中使用字符数组保存字符串并用final修饰，<code>StringBuffer</code>和<code>StringBuilder</code>都继承自<code>AbstractStringBuilder</code>类，<code>AbstractStringBuilder</code>中也使用字符数组保存字符串。<br><code>String</code>对象是不可变的，也就是可以理解为常量，显然线程安全；<br><code>StringBuffer</code>对方法加了同步锁或者对调用的方法加了同步锁，所以是线程安全的；<br><code>StringBuilder</code>并没有对方法进行加同步锁，所以是非线程安全的。</p>
+<h4 id="List、Set、Map的区别"><a href="#List、Set、Map的区别" class="headerlink" title="List、Set、Map的区别"></a><code>List</code>、<code>Set</code>、<code>Map</code>的区别</h4><p><code>List</code>、<code>Set</code>都是继承自<code>Collection</code>接口；<br><code>List</code>特征：元素有放入顺序，可重复；<br><code>Set</code>特征：元素无放入顺序，不可重复，重复元素会覆盖；<br><code>Map</code>特征：元素无序，key值不可重复（value值可重复）；</p>
+<h4 id="ArrayList与LinkedList的区别"><a href="#ArrayList与LinkedList的区别" class="headerlink" title="ArrayList与LinkedList的区别"></a><code>ArrayList</code>与<code>LinkedList</code>的区别</h4><p><code>ArrayLis</code>t是基于动态数组的数据结构实现的，因为地址连续，插入和删除操作效率比较低，适合查询；<code>LinkedList</code>是基于链表的数据结构实现的，因为地址是任意的，开辟空间的时候不需要一个连续的地址，对于查询操作效率比较低，适合插入和删除操作。</p>
+<h4 id="ArrayList与Vector的区别"><a href="#ArrayList与Vector的区别" class="headerlink" title="ArrayList与Vector的区别"></a><code>ArrayList</code>与<code>Vector</code>的区别</h4><ul>
 <li><code>ArrayList</code>和<code>Vector</code>都实现了<code>List</code>接口，都是有序集合，并且存放的元素是允许重复的，都是采用了线性连续空间存储元素；</li>
 <li><code>Vector</code>是线程安全的，而<code>ArrayList</code>是线程不安全的；</li>
 <li><code>ArrayList</code>和<code>Vector</code>都有一个初始的容量大小（10），当存储进它们里面的元素超过了容量，就需要增加它们的存储容量。<code>ArrayList</code>每次增长原来的0.5倍，而<code>Vector</code>增长原来的一倍。<code>ArrayList</code>和<code>Vector</code>都可以设置初始空间的大小，<code>Vector</code>还可以设置增长的空间大小，而<code>ArrayList</code>没有提供设置增长空间的方法。</li>
 </ul>
-<h5 id="HashMap与HashTable的区别"><a href="#HashMap与HashTable的区别" class="headerlink" title="HashMap与HashTable的区别"></a><code>HashMap</code>与<code>HashTable</code>的区别</h5><ul>
+<h4 id="HashMap与HashTable的区别"><a href="#HashMap与HashTable的区别" class="headerlink" title="HashMap与HashTable的区别"></a><code>HashMap</code>与<code>HashTable</code>的区别</h4><ul>
 <li><code>HashMap</code>和<code>HashTable</code>都实现了Map接口，都是key-value的数据结构；</li>
 <li><code>HashTable</code>是线程安全的，而<code>HashMap</code>是线程不安全的；</li>
 <li><code>HashMap</code>允许将null值作为key或value，而<code>HashTable</code>不允许(会抛<code>NullPointerException</code>)。</li>
 </ul>
-<h5 id="HashMap与TreeMap的区别"><a href="#HashMap与TreeMap的区别" class="headerlink" title="HashMap与TreeMap的区别"></a><code>HashMap</code>与<code>TreeMap</code>的区别</h5><ul>
+<h4 id="HashMap与TreeMap的区别"><a href="#HashMap与TreeMap的区别" class="headerlink" title="HashMap与TreeMap的区别"></a><code>HashMap</code>与<code>TreeMap</code>的区别</h4><ul>
 <li><code>HashMap</code>通过<code>hashCode</code>对其内容进行快速查找，而<code>TreeMap</code>中所有的元素都保持着某种固定的顺序，如果需要得到一个有序的结果就使用<code>TreeMap</code>。</li>
 <li><code>HashMap</code>基于哈希表实现，可以调优初始化容量和负载因子，适用于插入、删除和定位元素；</li>
 <li><code>TreeMap</code>基于红黑树实现，没有优化选项，该树总处于平衡状态，适用于按自然顺序或自定义顺序遍历键。</li>
